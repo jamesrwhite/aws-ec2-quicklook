@@ -9,6 +9,10 @@ point the root to `public/`.
 
 ![Screenshot](http://i.imgur.com/FWAkZjN.png)
 
+## How
+
+It works by searching all the tags attached to your ec2 instances such as the commonly used `Name` tag to identify an instance.
+
 ## License
 
 The MIT License (MIT)
