@@ -21,15 +21,19 @@
         // Get a reference to our table
         var $table = $('table');
 
+        // Toggle the table visiblilty
+        $table.addClass('hide');
+        $table.find('> tbody').empty();
+
         // Don't execute 0 length queries
         if (query.length > 0) {
+            // Show the loading indicator
+            $('img').addClass('show');
+
             // Execute the search after 100ms
             running = true;
             timeout = setTimeout(function() {
                 request = $.getJSON('ajax.php/search/' + encodeURIComponent(query)).done(function(instances) {
-                    // Empty the table body
-                    $table.find('> tbody').empty();
-
                     // Loop the response and add it to the table
                     instances.forEach(function(instance) {
                         // Default the IP's if they don't exist
@@ -53,11 +57,11 @@
                     });
                 }).always(function() {
                     running = false;
+
+                    // Hide the loading image
+                    $('img').removeClass('show');
                 });
             }, 100);
-        } else {
-            $table.addClass('hide');
-            $table.find('> tbody').empty();
         }
     });
 })();
