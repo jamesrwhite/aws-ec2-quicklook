@@ -1,0 +1,16 @@
+body {
+    padding: 20px;
+    background: #eee;
+}
+
+.table {
+    margin: 0;
+}
+
+.box-container {
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+    background: #fff;
+}

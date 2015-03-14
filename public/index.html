@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="css/style.css" rel="stylesheet"/>
+    <title>AWS EC2 Quicklook</title>
+</head>
+<body>
+    <form class="box-container form-inline">
+        <input class="search form-control" placeholder="Enter a search term.." autofocus/>
+    </form>
+
+    <div class="box-container">
+        <table class="table table-striped hide">
+            <thead>
+                <tr>
+                    <td>State</td>
+                    <td>Name</td>
+                    <td>ID</td>
+                    <td>Private IP</td>
+                    <td>Public IP</td>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <script defer src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script defer src="js/main.js"></script>
+</body>
+</html>
