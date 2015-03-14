@@ -22,7 +22,7 @@ $app->get('/search/:query', function ($query) use($ec2) {
         'Filters' => array(
             array(
                 'Name' => 'tag-value',
-                'Values' => array("*{$query}*")
+                'Values' => array($query)
             ),
         ),
     ))->toArray();
